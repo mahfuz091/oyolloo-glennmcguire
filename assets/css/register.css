@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.register-area {
+  padding: 100px 0;
+  position: relative;
+}
+
+.register-inner {
+  position: relative;
+  background: #fafafa;
+}
+
+.register-from {
+  padding: 46px 40px 40px 40px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+  background: #ffffff;
+  margin: 60px 60px 60px 30px;
+}
+.register-from .form-title {
+  font-size: 40px;
+  font-family: "DIN Condensed";
+  margin-bottom: 30px;
+}
+.form-select {
+  border: none;
+  appearance: none;
+  width: 184px;
+  height: 46px;
+  padding: 14px 15px 15px 18px;
+  color: #1179f2;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 1000px;
+  border: none;
+  outline: none;
+  background: #f7f9fc;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-select:focus,
+.form-select:active {
+  outline: none;
+  border: none;
+}
+
+.register-from .social_part {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.register-from .social_part .google {
+  background: #f2f6fc;
+  border-radius: 10px;
+  padding: 10px;
+}
+.register-from .social_part .google span {
+  color: #191f26;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.register-from .social_part .social_media {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.register-from .social_part .social_media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f6fc;
+  border-radius: 10px;
+  padding: 10px;
+}
+.register-from .form-short-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.register-from .form-short-title span {
+  display: block;
+  height: 1px;
+  width: 30%;
+  background: #e2e8eb;
+}
+.register-from .form-short-title h6 {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #707070;
+}
+.register-from .forgot-pass {
+  color: #707070;
+  font-size: 18px;
+}
+.register-from .link {
+  text-align: center;
+}
+.register-from .link p {
+  color: var(--p-5, #323e48);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.register-from .link a {
+  color: #1179f2;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}

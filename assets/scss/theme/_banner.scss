@@ -1,0 +1,92 @@
+/* banner area style
+============================================================================================ */
+.banner-area {
+	position: relative;
+	padding: 160px 0 50px;
+	background: url(../img/bg/banner-bg.png) bottom center no-repeat;
+	background-size: cover;
+	z-index: 1;
+	.banner-content {
+		text-align: center;
+		h1 {
+			font-size: 74px;
+			font-family: $din-font;
+		}
+		p {
+			font-size: 22px;
+			font-weight: 500;
+			color: $title-color;
+		}
+		img {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+
+
+// breadcrumb area
+.breadcrumb-area {
+    background: #FAFAFA;
+    padding: 160px 0 50px;
+	.breadcrumb-content {
+		.breadcrumb-nav {
+			p {
+				font-size: 16px;
+				color: #323E48;
+				margin-bottom: 0;
+				a {
+					color: #323e4880;
+				}
+			}
+		}
+		h2 {
+			font-size: 48px;
+			font-family: $din-font;
+			margin-bottom: 0;
+		}
+	}
+	.product-category-wrap {
+		display: flex;
+		justify-content: flex-end;
+		.product-category {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			background: $white;
+			border-radius: 1000px;
+			padding: 10px;
+			.cat-btn {
+				display: block;
+				border: 1px solid #EBEBEB;
+				background: #FAFAFA;
+				border-radius: 1000px;
+				padding: 12px 20px;
+				color: #323E48;
+				position: relative;
+
+				&:before {
+					height: 10px;
+					width: 10px;
+					content: "";
+					background: #F5CA56;
+					position: absolute;
+					left: 50%;
+					bottom: -5px;
+					transform: translateX(-50%) rotate(45deg);
+					opacity: 0;
+					visibility: hidden;
+					transition: .3s;
+				}
+				&:hover {
+					background: $primary-color;
+					border-color: $primary-color;
+					&:before {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+} 

@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('../fonts/din/DINCondensed-Bold.eot');
+    src: url('../fonts/din/DINCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/din/DINCondensed-Bold.woff2') format('woff2'),
+        url('../fonts/din/DINCondensed-Bold.woff') format('woff'),
+        url('../fonts/din/DINCondensed-Bold.ttf') format('truetype'),
+        url('../fonts/din/DINCondensed-Bold.svg#DINCondensed-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    line-height: 1.6;
+    font-size: 18px;
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $text-color;
+    background: $white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $title-color;
+    font-family: $primary-font;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    @include transition();
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.slick-slide:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.slick-slide img {
+    display: inline-block !important;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input, textarea {
+    background: #fff;
+    border: none;
+    width: 100%;
+    color: #A7A7A7;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    border: 1px solid #E2E8EB;
+}
+
+select {
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff url(../img/arrow-down-black.png) no-repeat scroll calc(97% + 5px) center/16px auto;
+    border: none;
+    width: 100%;
+    color: #A7A7A7;
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    border: 1px solid #E2E8EB;
+    padding: 0 20px;
+}
+
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input {
+    padding: 0 20px;
+}
+
+textarea {
+    padding: 15px 20px;
+    line-height: inherit;
+    height: 150px;
+}

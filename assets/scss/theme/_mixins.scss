@@ -1,0 +1,96 @@
+//    Mixins
+@mixin transition($args: all 0.3s ease 0s) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin transition-duration($args1, $args2) {
+    -webkit-transition-duration: $args1, $args2;
+    -moz-transition-duration: $args1, $args2;
+    -o-transition-duration: $args1, $args2;
+    transition-duration: $args1, $args2;
+}
+
+@mixin transition-delay($args1, $args2) {
+    -webkit-transition-delay: $args1, $args2;
+    -moz-transition-delay: $args1, $args2;
+    -o-transition-delay: $args1, $args2;
+    transition-delay: $args1, $args2;
+}
+
+@mixin transition-property($args1, $args2) {
+    -webkit-transition-property: $args1, $args2;
+    -moz-transition-property: $args1, $args2;
+    -o-transition-property: $args1, $args2;
+    transition-property: $args1, $args2;
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin gradient($deg, $args1, $args2) {
+    background: -webkit-linear-gradient($deg, $args1, $args2);
+    background: -moz-linear-gradient($deg, $args1, $args2);
+    background: -o-linear-gradient($deg, $args1, $args2);
+    background: linear-gradient($deg, $args1, $args2);
+}
+
+@mixin gradient-border($deg, $args1, $args2) {
+    border-image-source: -webkit-linear-gradient($deg, $args1, $args2);
+    border-image-source: -moz-linear-gradient($deg, $args1, $args2);
+    border-image-source: -o-linear-gradient($deg, $args1, $args2);
+    border-image-source: linear-gradient($deg, $args1, $args2);
+}
+
+@mixin filter ($filter-value) {
+    -webkit-filter: ($filter-value);
+    -moz-filter: ($filter-value);
+    -ms-filter: ($filter-value);
+    -o-filter: ($filter-value);
+    filter: ($filter-value);
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin keyframes ( $animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation ($args) {
+    -webkit-animation: $args;
+    -moz-animation: $args;
+    -o-animation: $args;
+    animation: $args;
+}

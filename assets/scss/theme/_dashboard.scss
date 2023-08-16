@@ -1,0 +1,530 @@
+/* sidebar area css
+============================================================================================ */
+.sidebar {
+    height: 100vh;
+    background: url(../img/bg/sidebar-bg.png) center no-repeat;
+    background-size: cover;
+    width: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    @include transition(.3s);
+    transition: .5s;
+    border-radius: 0 35px 0 0;
+    overflow: hidden scroll;
+    padding: 20px;
+    padding-bottom: 50px;
+    width: 300px;
+    z-index: 999;
+    .close {
+        display: block;
+        text-align: right;
+        display: none;
+        font-size: 20px;
+    }
+    &.active {
+        left: 0;
+    }
+    .logo-wrap {
+        text-align: center;
+        margin: 50px 0;
+        img {
+            width: 200px;
+        }
+    }
+    .navigation {
+        margin-right: -20px;
+        li {
+            margin: 15px 0;
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                border-radius: 40px 0 0 40px;
+                font-weight: 600;
+                font-size: 25px;
+                min-height: 78px;
+                width: auto;
+                padding: 0 20px;
+                padding-left: 40px;
+                color: $white;
+                @include transition();
+                .menu-icon {
+                    margin-right: 25px;
+                    @include filter(brightness(0) invert(1));
+                    @include transition();
+                }
+                .menu-shape {
+                    height: 137px;
+                    right: -12px;
+                    position: absolute;
+                    top: 45%;
+                    transform: translateY(-50%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .3s;
+                }
+                &:hover, &.active {
+                    background: $white;
+                    color: #0D143B;
+                    .menu-icon {
+                        @include filter(brightness(1) invert(0));
+                    }
+                    .menu-shape {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar-brands {
+        margin-top: 100px;
+        .single-sidebar-brand {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 6px;
+            min-height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  
+    &::-webkit-scrollbar {
+      width: 0;
+      background-color: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb  {
+      background-color: transparent;
+    }
+
+    .sidebar-social {
+        margin-top: 30px;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+                a {
+                    color: #CCCBCB;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        @include filter(grayscale(1));
+                    }
+                }
+            }
+        }
+    }
+}
+  
+  
+
+/* Start main content style
+============================================================================================ */
+.main-content {
+    width: calc(100% - 300px);
+    float: right;
+    padding: 30px 60px;
+    @include transition(.6s);
+    height: 100vh;
+    overflow: hidden scroll;
+}
+
+/* Start header bar style
+============================================================================================ */
+.header-bar {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    margin-bottom: 50px;
+    .db-menu-wrap {
+        display: none;
+        .db-menu-trigger {
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+        }
+    }
+    .header-bar-btn {
+        text-align: right;
+        .primary-btn {
+            box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            font-family: $primary-font;
+            font-size: 25px;
+            font-weight: 700;
+            padding: 20px 61px;
+        }
+    }
+}
+
+
+/* Start dashboard card area style
+============================================================================================ */
+.dashboard-card-area {
+    &.card-area1 {
+        margin-bottom: 50px;
+    }
+    &.card-area3 {
+        .dashboard-card-item {
+            height: 100%;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2 {
+                margin: 20px 0;
+            }
+            .link-btn {
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 10px;
+                font-size: 21px;
+                font-weight: 700;
+                color: $white;
+                padding: 14px 20px;
+                display: inline-block;
+                &:hover {
+                    background: $primary-color;
+                    color: #000;
+                }
+            }
+        }
+    }
+    &.card-area4 {
+        .dashboard-card-item {
+            padding: 40px;
+            margin-bottom: 0;
+            h2 {
+                margin: 30px 0 0 0;
+            }
+        }
+    }
+    .small-card-item {
+        background: #264ED7;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.08);
+        &.small-card-bg1 {
+            background: linear-gradient(210.31deg, #1435FF 18.44%, #2C56CB 112.29%);
+        }
+        &.small-card-bg2 {
+            background: linear-gradient(206.69deg, #964CEB 16.73%, #4B1BB3 95.31%);
+        }
+        &.small-card-bg3 {
+            background: linear-gradient(224.38deg, #FDA22F 8.42%, #EB542D 93.61%);
+        }
+        &.small-card-bg4 {
+            background: linear-gradient(232.21deg, #5BBAFB 9.12%, #086BB4 90.82%);
+        }
+        &.small-card-bg5 {
+            background: linear-gradient(229.06deg, #63E096 8.09%, #0C8946 91.97%);
+        }
+        &.small-card-bg6 {
+            background: linear-gradient(229.16deg, #EA6F97 9.22%, #7A409D 82.05%);
+        }
+        .small-card-price-value {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: 800;
+            font-family: $primary-font;
+            padding: 14px 5px;
+            margin-bottom: 25px;
+        }
+        .small-card-title {
+            margin-bottom: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: $white;
+        }
+    }
+
+    .dashboard-card-item {
+        background: #FE8562;
+        padding: 30px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+        box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.08);
+        &.dashboard-card-bg1 {
+            background: linear-gradient(90deg, #FE875D 0%, #FE67AE 100%);
+        }
+        &.dashboard-card-bg2 {
+            background: linear-gradient(90deg, #EF71EA 0%, #8563F8 100%);
+        }
+        &.dashboard-card-bg3 {
+            background: linear-gradient(90deg, #38CFBE 0%, #139AD1 100%);
+        }
+        h4 {
+            font-family: $primary-font;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        h2 {
+            font-family: $primary-font;
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .card-icon {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            z-index: -1;
+        }
+        
+    }
+    .token-card-item {
+        text-align: center;
+        padding: 15px 30px 30px;
+        background: #EDECFE;
+        border-radius: 10px;
+        &.token-card2 {
+            h2 {
+                color: #49C67E;
+            }
+        }
+        .token-card-icon {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 25px;
+            font-weight: 600;
+            color: #0D143B;
+        }
+        h2 {
+            font-size: 40px;
+            font-family: $primary-font;
+            color: #EF4538;
+            font-weight: 800;
+        }
+    }
+}
+
+
+/* Start wallet area style
+============================================================================================ */
+.wallet-area {
+    margin-top: 50px;
+    &.calculator {
+        .wallet-inner {
+            background: linear-gradient(90deg, #ED70EA 0%, #8663F8 100%);
+            border-radius: 10px;
+            padding: 60px;
+            .calculator-form-group {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                margin-bottom: 30px;
+                .form-group {
+                    label {
+                        font-size: 25px;
+                        font-weight: 700;
+                        display: block;
+                        color: $white;
+                        margin-bottom: 15px;
+                    }
+                    input {
+                        border: 1.5px solid #E7E7E7;
+                        border-radius: 10px;
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: $white;
+                        background: transparent;
+                        padding: 0 40px;
+                        line-height: 71px;
+                        width: 100%;
+                        &::placeholder {
+                            font-size: 22px;
+                            font-weight: 700;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .separator {
+                background: linear-gradient(90deg, #C5B905 0%, #FFF558 100%);
+                border-radius: 2.5px;
+                height: 5px;
+                margin-bottom: 30px;
+            }
+            .range-slider {
+                margin-bottom: 30px;
+                label {
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 22px;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                .progress {
+                    background: linear-gradient(to right, #FAEE3A 0%, #FAEE3A 40%, #fff 40%, #fff 100%);
+                    border-radius: 8px;
+                    height: 16px;
+                    width: 100%;
+                    outline: none;
+                    transition: background 450ms ease-in;
+                    -webkit-appearance: none;
+                    overflow: initial;
+                }
+                  
+                .progress::-webkit-slider-thumb {
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    -webkit-appearance: none;
+                    cursor: ew-resize;
+                    background: $primary-color;
+                    @include transition();
+                    &:hover {
+                        background: #1E1E11;
+                    }
+                }
+                
+            }
+            .wallet-info {
+                .single-wallet-info-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    span {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .wallet-inner {
+        background: linear-gradient(90deg, #149BD0 0%, #36CDBE 100%);
+        border-radius: 10px;
+        padding: 60px;
+        .import-form-group {
+            .form-group {
+                display: grid;
+                grid-template-columns: 5fr 1fr;
+                gap: 30px;
+                margin-bottom: 30px;
+                input {
+                    border: 1.5px solid #E7E7E7;
+                    border-radius: 10px;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: $white;
+                    background: transparent;
+                    padding: 0 40px;
+                    line-height: 71px;
+                    width: 100%;
+                    &::placeholder {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: $white;
+                    }
+                    &[type="submit"] {
+                        @include transition();
+                        &:hover {
+                            background: $primary-color;
+                            color: #000;
+                            border-color: $primary-color;                        
+                        }
+                    }
+                }
+            }
+        }
+        .wallet-info {
+            .single-wallet-info-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                span {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/* Start coming soon area style
+============================================================================================ */
+.coming-soon-area {
+    .coming-soon-wrap {
+        background: linear-gradient(90deg, #ED70EA 23.31%, #8763F7 100%);
+        box-shadow: 30px 40px 60px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        padding: 55px;
+        text-align: center;
+        margin-bottom: 50px;
+        h2 {
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
+            font-size: 50px;
+            padding: 53px 30px;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+
+/* Start coming soon cta area style
+============================================================================================ */
+.coming-soon-cta {
+    .coming-soon-cta-inner {
+        background: linear-gradient(270deg, #37CEBE 1.18%, #149BD0 57.98%);
+        border-radius: 10px;
+        padding: 50px 35px;
+        text-align: center;
+        p {
+            font-size: 35px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 10px;
+        }
+        .cta-btn-wrap {
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+            .primary-btn {
+                padding: 21px 26px;
+                &.bordered-btn {
+                    border-color: $white;
+                    border-left: 0;
+                }
+                &.skew-left:before {
+                    border-color: $white;
+                    border-right: 0;
+                }
+                &:hover {
+                    &.bordered-btn {
+                        border-color: $primary-color;
+                    }
+                    &.skew-left:before {
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

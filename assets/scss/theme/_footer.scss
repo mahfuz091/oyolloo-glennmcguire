@@ -1,0 +1,132 @@
+/* Footer area css
+============================================================================================ */
+.footer-area {
+    background: #121212;
+    padding-bottom: 20px;
+    .footer-top {
+        padding: 140px 0 60px;
+    }
+    .footer-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: $white;
+    }
+
+    .footer-widget {
+        &.footer-about {
+            background: #1F1F1F;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 20px;
+            border-radius: 25px;
+            .footer-about-left {
+                .footer-logo {
+                    display: block;
+                    margin-bottom: 30px;
+                }
+                h2 {
+                    font-size: 24px;
+                    color: #D2D2D2;
+                    font-weight: 600;
+                    margin-bottom: 45px;
+                }
+            }
+        }
+        &.contact-info {
+            .footer-menu {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                li {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #B7B7B7;
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                    a {
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: #B7B7B7;
+                        @include transition();
+                        &:hover {
+                            color: $primary-color2;
+                        }
+                    }
+                }
+            }
+            .social-title {
+                font-size: 20px;
+                font-weight: 600;
+                color: $white;
+                margin-top: 40px;
+            }
+            .footer-social {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin: 20px 0;
+                li {
+                    a {
+                        color: $title-color;
+                        height: 32px;
+                        width: 32px;
+                        display: flex;
+                        background: #fff;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        @include transition();
+                        &:hover {
+                            color: $primary-color2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-menu {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            a {
+                font-size: 18px;
+                font-weight: 400;
+                color: #B7B7B7;
+                @include transition();
+                &:hover {
+                    color: $primary-color2;
+                }
+            }
+        }
+    }
+}
+
+
+.footer-bottom {
+    padding: 15px 0;
+    background: #1F1F1F;
+    .copyright {
+        font-size: 14px;
+        font-weight: 400;
+        color: #B7B7B7;
+        margin-bottom: 0;
+    }
+    .footer-menu {
+        display: flex;
+        justify-content: flex-end;
+        li {    
+            &:not(:last-child) {
+                border-right: 1px solid #B7B7B7;
+                margin-right: 15px;
+                padding-right: 15px;
+                margin-bottom: 0;
+            }
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+}

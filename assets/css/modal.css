@@ -1,0 +1,64 @@
+.modal-content {
+  background-image: url("/assets/img/bg_modal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  max-height: 680px;
+}
+.modal-body {
+  margin: 60px;
+}
+.close-btn {
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  right: 12px;
+  top: 12px;
+}
+
+.modal-card-group {
+  display: flex;
+  gap: 40px;
+}
+.modal-card {
+  border: 4px solid var(--p-6, #fff);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 70px 40px;
+  text-align: center;
+}
+.modal-card-title {
+  color: var(--primary-color-4, #0e0b01);
+  text-align: center;
+  font-family: DIN Condensed;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.modal-card-description {
+  color: var(--p-5, #323e48);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 177.778% */
+  margin-top: 14px;
+  margin-bottom: 163px;
+}
+.modal-btn {
+  border-radius: 1000px;
+  background: var(--p-1, #f5ca56);
+  padding: 24px 71px;
+  color: var(--p-4, #191f26);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
