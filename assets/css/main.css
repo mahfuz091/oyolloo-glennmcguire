@@ -53,9 +53,24 @@ a {
 .feature-title span {
   color: var(--secondary-solid, #06b2be);
 }
+@media (min-width: 1200px) {
+  .feature-title {
+    font-size: 43px;
+  }
+}
 
 .feature-cards {
   padding: 0 42px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+}
+@media (min-width: 1200px) {
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
 }
 
 .feature-card-one {
@@ -70,6 +85,7 @@ a {
   );
   box-shadow: 0px 19px 70px 0px rgba(6, 177, 190, 0.22);
 }
+
 .feature-card-two,
 .feature-card-three,
 .feature-card-four {
@@ -80,7 +96,29 @@ a {
 
   border-radius: 20px;
   background: #191331;
-  margin-top: 30px;
+}
+@media (min-width: 1200px) {
+  .feature-card-two {
+    width: 307.052px;
+    height: 343.274px;
+
+    background: var(
+      --gradient-g-1,
+      linear-gradient(136deg, #f39068 4.17%, #06b1be 51.56%, #fbca51 90.63%)
+    );
+    box-shadow: 0px 19px 70px 0px rgba(6, 177, 190, 0.22);
+  }
+}
+@media (min-width: 1200px) {
+  .feature-card-one,
+  .feature-card-three,
+  .feature-card-four {
+    width: 307.052px;
+    height: 343.274px;
+    border-radius: 20px;
+    background: #191331;
+    box-shadow: none;
+  }
 }
 
 .icon {
@@ -142,6 +180,20 @@ a {
 .feature-card-four .feature-card-title {
   color: #fff;
 }
+@media (min-width: 1200px) {
+  .feature-card-one .feature-card-title,
+  .feature-card-three .feature-card-title,
+  .feature-card-four .feature-card-title {
+    color: #fff;
+    font-size: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  .feature-card-two .feature-card-title {
+    color: #000;
+    font-size: 21px;
+  }
+}
 
 .feature-card-desc {
   color: #05001a;
@@ -159,6 +211,19 @@ a {
 .feature-card-four .feature-card-desc {
   color: #fff;
 }
+@media (min-width: 1200px) {
+  .feature-card-one .feature-card-desc,
+  .feature-card-three .feature-card-desc,
+  .feature-card-four .feature-card-desc {
+    color: #fff;
+  }
+}
+@media (min-width: 1200px) {
+  .feature-card-two .feature-card-desc {
+    color: #05001a;
+    font-size: 15px;
+  }
+}
 .feature-card-one a {
   color: #05001a;
   text-align: center;
@@ -168,11 +233,37 @@ a {
   font-weight: 600;
   line-height: 25px; /* 178.571% */
 }
+
 .feature-card-two a,
 .feature-card-three a,
 .feature-card-four a {
   color: #fff;
 }
+.feature-card-one a svg {
+  stroke: #05001a;
+}
+.feature-card-two a svg {
+  stroke: white;
+}
+@media (min-width: 1200px) {
+  .feature-card-two a {
+    color: #05001a;
+  }
+  .feature-card-two a svg {
+    stroke: #05001a;
+  }
+  .feature-card-one a svg {
+    stroke: #c1bfc8;
+  }
+}
+@media (min-width: 1200px) {
+  .feature-card-one a,
+  .feature-card-three a,
+  .feature-card-four a {
+    color: #fff;
+  }
+}
+
 .join-area {
   background: #05001a;
   padding-top: 60px;
@@ -258,7 +349,13 @@ a {
 /* key section */
 .key {
   background: #110b28;
-  padding-top: 104px 24px;
+  padding: 104px 24px;
+}
+@media (min-width: 1200px) {
+  .key {
+    background: #110b28;
+    padding: 131.84px 0px;
+  }
 }
 .key-title {
   color: #fff;
@@ -269,6 +366,12 @@ a {
   font-weight: 700;
   line-height: normal;
   margin-bottom: 31px;
+}
+@media (min-width: 1200px) {
+  .key-title {
+    font-size: 43px;
+    margin-bottom: 53.97px;
+  }
 }
 .key-cards {
   display: grid;
@@ -285,6 +388,20 @@ a {
   background: #231d3e;
   padding: 20px;
 }
+@media (min-width: 1200px) {
+  .key-card__one,
+  .key-card__two,
+  .key-card__three,
+  .key-card__four {
+    width: 1320px;
+    height: 386.668px;
+
+    border-radius: 20px;
+    padding-top: 41.19px;
+    padding-left: 35.18px;
+    padding-right: 35.18px;
+  }
+}
 .key-icon {
   width: 61px;
   height: 61px;
@@ -296,6 +413,14 @@ a {
   align-items: center;
   margin-bottom: 16px;
 }
+@media (min-width: 1200px) {
+  .key-icon {
+    width: 74.802px;
+    height: 74.802px;
+    border-radius: 10px;
+    margin-bottom: 23.25px;
+  }
+}
 .key-card-title {
   color: #fff;
   font-family: Montserrat;
@@ -306,6 +431,13 @@ a {
 
   margin-bottom: 14px;
 }
+@media (min-width: 1200px) {
+  .key-card-title {
+    font-size: 30px;
+    margin-bottom: 18.25px;
+  }
+}
+
 .key-card__one .key-card-title {
   padding-right: 29px;
 }
@@ -329,4 +461,9 @@ a {
 }
 .key-card-desc span {
   color: #fff;
+}
+@media (min-width: 1200px) {
+  .key-card-desc {
+    font-size: 18px;
+  }
 }
