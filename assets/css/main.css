@@ -810,9 +810,39 @@ a {
   background: #05001a;
 }
 
+@media (min-width: 1200px) {
+  .pre-register {
+    padding-top: 179px;
+    position: relative;
+  }
+  .pre-register .ellipse4 {
+    border-radius: 493.897px;
+    opacity: 0.3;
+    background: var(--secondary-solid, #06b2be);
+    filter: blur(150px);
+    width: 493.897px;
+    height: 493.897px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 89px;
+    bottom: 0;
+  }
+  .pre-register .ellipse5 {
+    width: 493.897px;
+    height: 493.897px;
+    flex-shrink: 0;
+    border-radius: 493.897px;
+    opacity: 0.3;
+    background: var(--third-solid, #fbca51);
+    filter: blur(150px);
+    position: absolute;
+    left: 1166px;
+    top: -30px;
+  }
+}
+
 .pre-register .page-wrapper {
   padding: 0 24px;
-  position: relative;
 }
 .pre-register .page-wrapper svg {
   position: absolute;
@@ -918,11 +948,10 @@ a {
   background: #110b28;
   text-align: center;
   padding-top: 154px;
-  z-index: -999999999999;
-}
-.footer-area .page-wrapper {
   position: relative;
+  z-index: 99999999999999;
 }
+
 .footer-area .page-wrapper svg {
   position: absolute;
   left: -35px;
