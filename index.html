@@ -21,6 +21,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/aos.css" />
@@ -463,8 +464,64 @@
     </div>
   </section>
 
+
+  <!-- Partner section start -->
+  <section class="partner">
+    <div class="swiper mySwiper">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="assets/img/p1.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/p2.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/p3.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/p4.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/p5.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/p6.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/p7.png" alt="">
+        </div>
+
+      </div>
+  </section>
+
+  <section class="pre-register">
+    <div class="page-wrapper">
+      <div class="pre-register-container ">
+        <h2 class="pre-register-title">Join ‘GG Portal’ Today And Unlock The Transformative Power Of Community
+          Collaboration.</h2>
+        <div class="text-center">
+          <button class="pre-register__btn">Pre-Register</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- Main Js -->
   <script src="assets/js/main.js"></script>
+  <!-- Swiper Js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    let swiper = new Swiper(".mySwiper", {
+      slidesPerView: 7,
+      spaceBetween: 122,
+
+    });
+  </script>
 </body>
 
 </html>
