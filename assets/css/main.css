@@ -423,6 +423,27 @@ a {
 
 .ellipse {
   position: relative;
+
+}
+
+.mobile-ellipse {
+  width: 270.565px;
+  height: 270.565px;
+  flex-shrink: 0;
+  border-radius: 270.565px;
+  opacity: 0.3;
+  background: var(--third-solid, #FBCA51);
+  filter: blur(75px);
+  position: absolute;
+  bottom: 525px;
+  right: -36px;
+
+}
+
+@media (min-width: 768px) {
+  .mobile-ellipse {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -514,6 +535,7 @@ a {
   grid-template-columns: 1fr;
   gap: 35px;
   position: relative;
+
 }
 
 @media (min-width: 768px) {
@@ -1011,7 +1033,9 @@ a {
   left: -109px;
   top: 569px;
   z-index: 11;
+  display: none;
 }
+
 
 @media (min-width: 1200px) {
   .ellipse5 {
